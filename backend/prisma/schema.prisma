@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+
+model JobOpening {
+  id        String   @id 
+  title     String
+  location  String
+  rating    Float
+  jobDescription  String
+  employmentType String
+  packagePerAnnum String
+  companyLogoUrl String
+}
